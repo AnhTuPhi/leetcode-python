@@ -15,10 +15,9 @@ class MySolution(Solution[Input, List[int]]):
 
     def solve(self, input: I) -> O:
         nums: List[int] = input.nums
-        i: int = 1
-
+        i = 1  # start at 1, not 0
         for j in range(2, len(nums)):
-            if nums[j] != nums[i - 1]:
+            if nums[j] != nums[i - 1]:  # compare 2 steps back
                 i += 1
                 nums[i] = nums[j]
 
